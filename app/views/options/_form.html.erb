@@ -1,0 +1,62 @@
+<%= form_for(@option) do |f| %>
+  <% if @option.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@option.errors.count, "error") %> prohibited this option from being saved:</h2>
+
+      <ul>
+      <% @option.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :long_option %><br>
+    <%= f.text_field :long_option %>
+  </div>
+  <div class="field">
+    <%= f.label :short_option %><br>
+    <%= f.text_field :short_option %>
+  </div>
+  <div class="field">
+    <%= f.label :option_file %><br>
+    <%= f.text_field :option_file %>
+  </div>
+  <div class="field">
+    <%= f.label :short_option_can_be_strung %><br>
+    <%= f.check_box :short_option_can_be_strung %>
+  </div>
+  <div class="field">
+    <%= f.label :description %><br>
+    <%= f.text_area :description %>
+  </div>
+  <div class="field">
+    <%= f.label :extended_description %><br>
+    <%= f.text_area :extended_description %>
+  </div>
+  <div class="field">
+    <%= f.label :default_value %><br>
+    <%= f.text_field :default_value%>
+  </div>
+
+  <div class="field">
+    <%= f.label :tool_id %><br>
+    <%= f.collection_select :tool_id, @tools, :id, :name %>
+  </div>
+  <div class="field">
+    <%= f.label :introduced_version %><br>
+    <%= f.text_field :introduced_version %>
+  </div>
+  <div class="field">
+    <%= f.label :removed_version %><br>
+    <%= f.text_field :removed_version %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  major_version: MyString
+  minor_version: MyString
+  build_release: MyString
+  edition: MyString
+  is_latest: false
+  tool_id: 
+
+two:
+  major_version: MyString
+  minor_version: MyString
+  build_release: MyString
+  edition: MyString
+  is_latest: false
+  tool_id: 
