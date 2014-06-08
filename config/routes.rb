@@ -1,5 +1,10 @@
 Mysqlize::Application.routes.draw do
+  resources :option_releases
+
+  resources :categories
+
   resources :releases
+  
 
   resources :options
 

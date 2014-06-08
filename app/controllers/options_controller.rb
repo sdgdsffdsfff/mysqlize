@@ -4,7 +4,7 @@ class OptionsController < ApplicationController
   # GET /options
   # GET /options.json
   def index
-    @options = Option.all.order("options.name ASC")
+    @options = Option.joins('LEFT JOIN categories ON categories.id = options.category_id').order(:name)
 
   end
 
@@ -17,11 +17,13 @@ class OptionsController < ApplicationController
   def new
     @option = Option.new
     @tools = Tool.all
+    @categories = Category.all
   end
 
   # GET /options/1/edit
   def edit
-    @tools = Tool.all
+    #@tools = Tool.all
+    @categories = Category.all
   end
 
   # POST /options
@@ -29,6 +31,7 @@ class OptionsController < ApplicationController
   def create
     @option = Option.new(option_params)
     @tools = Tool.all
+    @categories = Category.all
     respond_to do |format|
       if @option.save
         format.html { redirect_to @option, notice: 'Option was successfully created.' }
@@ -72,6 +75,6 @@ class OptionsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def option_params
-      params.require(:option).permit(:tool_id, :name, :long_option, :short_option, :option_file, :short_option_can_be_strung, :introduced_version, :removed_version, :description, :extended_description, :status, :default_value)
+      params.require(:option).permit(:tool_id, :name, :long_option, :short_option, :option_file, :short_option_can_be_strung, :introduced_version, :removed_version, :description, :extended_description, :status, :default_value, :category_id)
     end
 end

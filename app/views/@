@@ -24,8 +24,9 @@ Total options: <%= @options.count %>
         <td><%= option.short_option %></td>
         <td><%= option.option_file %></td>
         <td><%= option.default_value %></td>
+        <td><%= option.short_option_can_be_strung %></td>
         <td><%= (option.description.to_s.length >= 45) ? option.description[0..17] + "..." + option.description.last(25) : option.description %></td>
-        <td><%= option.category_id %></td>
+        <td><%= option.category.id %></td>
         <td><%= link_to 'Show', option %></td>
         <td><%= link_to 'Edit', edit_option_path(option) %></td>
         <td><%= link_to 'Destroy', option, method: :delete, data: { confirm: 'Are you sure?' } %></td>

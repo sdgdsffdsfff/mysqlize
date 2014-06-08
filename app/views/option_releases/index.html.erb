@@ -1,0 +1,33 @@
+<h1>Listing option_releases</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Option</th>
+      <th>Release</th>
+      <th>Deprecated</th>
+      <th>Introduced</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @option_releases.each do |option_release| %>
+      <tr>
+        <td><%= option_release.option %></td>
+        <td><%= option_release.release %></td>
+        <td><%= option_release.deprecated %></td>
+        <td><%= option_release.introduced %></td>
+        <td><%= link_to 'Show', option_release %></td>
+        <td><%= link_to 'Edit', edit_option_release_path(option_release) %></td>
+        <td><%= link_to 'Destroy', option_release, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Option release', new_option_release_path %>
