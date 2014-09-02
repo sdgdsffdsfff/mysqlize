@@ -7,9 +7,9 @@ class OptionsController < ApplicationController
     case params[:tool]
       when 'mysqldump'
         @options = Option.joins('LEFT JOIN categories ON categories.id = options.category_id').order(:name)
-        @default_values = []
-        for option in @options do
-           @default_values.push(option) unless option.default_value.blank?
+        for option in @options do 
+          if option.default_value != Nil
+            @default_values.push(option)
         end
     end
   end

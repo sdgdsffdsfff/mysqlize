@@ -10,11 +10,13 @@ Mysqlize::Application.routes.draw do
 
   resources :tools
 
+  match 'mysqldump' => 'options#index', :defaults => { :tool => 'mysqldump'}, :via => :get
+  match 'xtrabackup' => 'options#index', :defaults => { :tool => 'xtrabackup'}, :via => :get
+  match 'mysqlbackup' => 'options#index', :defaults => { :tool => 'mysqlbackup'}, :via => :get 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  # root 'welcome#index'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

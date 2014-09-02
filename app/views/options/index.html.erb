@@ -1,3 +1,20 @@
+<div>
+  <div class="checkbox">
+    <label>
+      <input type="checkbox"> Default values 
+    </label>
+  </div>
+  <div class="checkbox">
+    <label>
+      <input type="checkbox"> Short options 
+    </label>
+  </div>
+</div>
+<textarea class="field span12" rows="3">mysqldump
+<% @default_values.each do |default| %>
+  <%= default.long_option.split("=")[0] + '=' + default.default_value %>
+<% end %>
+</textarea>
 <h1>Listing options</h1>
 Total options: <%= @options.count %>
 <table>
