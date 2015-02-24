@@ -1,0 +1,67 @@
+<!doctype html>
+<html ng-app="mysqlize">
+  <head>
+    <title>My Angular App</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/pacifico.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.10/angular.min.js"></script>
+    <script src="https://angular-ui.github.io/bootstrap/ui-bootstrap-tpls-0.11.0.min.js"></script>
+    <script src="/js/script.js"></script>
+    <link href='http://fonts.googleapis.com/css?family=Inconsolata' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600' rel='stylesheet' type='text/css'>
+  </head>
+  <body>
+  <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="container">
+      <div class="navbar-header"><a class="navbar-brand" href="#">mysqlize></a> </div>
+      <div class="navbar-collapse collapse">
+        <ul class="nav navbar-nav">
+          <li class="active"><a href="#">Xtrabackup</a></li>
+          <li class=""><a href="#">mysqldump</a></li>
+          <li class=""><a href="#">mysqlbackup</a></li>
+        </ul>
+      </div> <!-- .navbar-collapse -->
+    </div><!-- .container -->
+  </div><!-- navbar -->
+<%= yield %>
+  <div class="container">
+    <div class="row">
+      <h2><span class="glyphicon glyphicon-wrench"></span> Build your command!</h2>
+    </div><!-- .row -->
+    <div class="row spacer-sm">
+  <div class="pull-left">
+    <h4>Use the options available for the current tool and copy the command below</h4>
+  </div>
+<div ng-controller="ButtonsCtrl" class="pull-right">
+    
+    <div class="btn-group">
+        <label class="btn btn-success" ng-model="checkModel.left" btn-checkbox>Show default values</label>
+        <label class="btn btn-success" ng-model="checkModel.middle" btn-checkbox>Show short options</label>
+        <label class="btn btn-warning" ng-model="checkModel.right" btn-checkbox>Copy!</label>
+        <div class="btn-group" dropdown is-open="status.isopen">
+      <button type="button" class="btn btn-danger dropdown-toggle" ng-disabled="disabled">
+         Choose version<span class="caret"></span>
+      </button>
+      <ul class="dropdown-menu" role="menu">
+        <li><a href="#">Action</a></li>
+        <li><a href="#">Another action</a></li>
+        <li><a href="#">Something else here</a></li>
+        <li class="divider"></li>
+        <li><a href="#">Separated link</a></li>
+      </ul>
+    </div>
+    </div>
+
+</div>
+    </div>
+    <div class="row">
+      <div class="sandbox outline" id="sandbox"><span contenteditable="true" class="pull-left" tooltip-animation="false" tooltip="I don't fade. :-(" >
+        ./bin/</span><span class="pull-left">mysqldump</span>
+      </div>
+
+    </div>
+    <div class="row">
+    </div>
+  </div><!-- container -->
+  </body>
+</html>
