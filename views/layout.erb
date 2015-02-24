@@ -32,7 +32,7 @@
   <div class="pull-left">
     <h4>Use the options available for the current tool and copy the command below</h4>
   </div>
-<div ng-controller="ButtonsCtrl" class="pull-right">
+<div  class="pull-right">
     
     <div class="btn-group">
         <label class="btn btn-success" ng-model="checkModel.left" btn-checkbox>Show default values</label>
@@ -61,6 +61,9 @@
 
     </div>
     <div class="row">
+      <div ng-controller="OptionController">
+        {{options}}
+      </div>
     </div>
   </div><!-- container -->
   </body>

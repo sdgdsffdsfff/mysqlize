@@ -4,7 +4,7 @@ require 'json'
 require 'mongo'
 require 'rest_client'
 #asda
-set :port, 80
+set :port, 8080
 include Mongo
 configure do
   conn = MongoClient.new("localhost", 27017)
