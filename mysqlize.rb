@@ -24,6 +24,5 @@ end
 
 
 not_found do
-  content_type :json
-  halt 404, { error: 'URL not found' }.to_json
+  halt 404 
 end

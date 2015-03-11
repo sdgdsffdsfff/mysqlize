@@ -1,7 +1,9 @@
 <!doctype html>
 <html ng-app="mysqlize">
   <head>
-    <title>My Angular App</title>
+    <title>mysqlize> easy copy-paste tool for MySQL geeks</title>
+    <meta charset="utf-8">
+    <base href="/">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="/css/pacifico.css">
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.10/angular.min.js"></script>
@@ -62,7 +64,9 @@
     </div>
     <div class="row">
       <div ng-controller="OptionController">
-        {{options}}
+        <ul>
+          <li ng-repeat="option in options">{{option}}</li>
+        <ul>
       </div>
     </div>
   </div><!-- container -->
