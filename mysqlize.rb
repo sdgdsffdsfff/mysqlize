@@ -13,7 +13,15 @@ configure do
 end
 
 # edit
-get '/' do
+get '/xtrabackup' do
+  erb :index
+end
+
+get '/mysqldump' do
+  erb :index
+end
+
+get '/mysqlbackup' do
   erb :index
 end
 
@@ -25,4 +33,4 @@ end
 
 not_found do
   halt 404 
-end
+  end
