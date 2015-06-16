@@ -1,14 +1,12 @@
 <!doctype html>
-<html ng-app="mysqlize">
+<html>
   <head>
     <title>mysqlize> easy copy-paste tool for MySQL geeks</title>
     <meta charset="utf-8">
     <base href="/">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="/css/pacifico.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.10/angular.min.js"></script>
-    <script src="https://angular-ui.github.io/bootstrap/ui-bootstrap-tpls-0.11.0.min.js"></script>
-    <script src="/js/script.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script> 
     <link href='http://fonts.googleapis.com/css?family=Inconsolata' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600' rel='stylesheet' type='text/css'>
   </head>
@@ -37,11 +35,11 @@
 <div  class="pull-right">
     
     <div class="btn-group">
-        <label class="btn btn-success" ng-model="checkModel.left" btn-checkbox>Show default values</label>
-        <label class="btn btn-success" ng-model="checkModel.middle" btn-checkbox>Show short options</label>
-        <label class="btn btn-warning" ng-model="checkModel.right" btn-checkbox>Copy!</label>
+        <label class="btn btn-success" >Show default values</label>
+        <label class="btn btn-success" >Show short options</label>
+        <label class="btn btn-warning">Copy!</label>
         <div class="btn-group" dropdown is-open="status.isopen">
-      <button type="button" class="btn btn-danger dropdown-toggle" ng-disabled="disabled">
+      <button type="button" class="btn btn-danger dropdown-toggle" >
          Choose version<span class="caret"></span>
       </button>
       <ul class="dropdown-menu" role="menu">
@@ -63,10 +61,7 @@
 
     </div>
     <div class="row">
-      <div ng-controller="OptionController">
-        <ul>
-          <li ng-repeat="option in options">{{option}}</li>
-        <ul>
+      <div>
       </div>
     </div>
   </div><!-- container -->
