@@ -29,6 +29,9 @@ h2 { color: #303030;}
 .navbar-brand {
   font-size:2em;
 }
+.row-margin{
+  margin-top:15px;
+}
 [contenteditable="true"] { background: #E9E9E9;  }
 [contenteditable="true"]:hover { background: #E0E0E0;  }
 
