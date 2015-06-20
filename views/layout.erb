@@ -55,14 +55,29 @@
 
 </div>
     </div>
-    <div class="row">
-      <div class="sandbox outline" id="sandbox"><span contenteditable="true" class="pull-left" tooltip-animation="false" tooltip="I don't fade. :-(" >
-        ./bin/</span><span class="pull-left">mysqldump</span>
+    <div class="row row-sandbox">
+      <div class="sandbox outline" id="sandbox">
+        <span contenteditable="true" class="pull-left" tooltip-animation="false" tooltip="I don't fade. :-(" >
+        ./bin/
+        </span><span class="pull-left">mysqldump</span>
       </div>
-
     </div>
-    <div class="row">
-      <div>
+    
+    <!-- Search -->
+    <div class="row row-margin row-search">
+      <input type="text" class="form-control" placeholder="Search for an option"></input>
+    <!-- /input-group -->
+    </div>
+    <!-- End Search -->
+
+    <div class="row row-margin row-options">
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h3 class="panel-title">Options for <span class="option-title"></span></h3>
+        </div>
+        <div class="panel-body panel-body-options">
+          Panel content
+        </div>
       </div>
     </div>
   </div><!-- container -->
