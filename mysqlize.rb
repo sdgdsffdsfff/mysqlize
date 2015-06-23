@@ -30,7 +30,8 @@ get '/options/:tool/:version' do
   settings.mongo_db['options'].find('tool' => params[:tool], 'versions' => { '$in' => [params[:version]]}).to_a.to_json
 end
 
-
+# 404 Error
 not_found do
-  halt 404 
-  end
+  status 404
+  erb :error404
+end
