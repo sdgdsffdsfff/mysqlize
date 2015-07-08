@@ -19,6 +19,9 @@ h2 { color: #303030;}
   height: auto !important;
   margin: 0 auto -40px;
 }
+#wrapper > .container {
+  padding-top: 40px;
+}
 .sandbox{
   transition: box-shadow 0.2s cubic-bezier(0.4, 0, 0.2, 1);
   transition-delay: 0.2s;
@@ -43,9 +46,23 @@ h2 { color: #303030;}
 .row-margin{
   margin-top:15px;
 }
-.footer {
-  background: #AAA; 
+.row-margin-bottom{
+  margin-bottom: 15px;
+
+}
+.options-container { 
+  border: 1px solid #DDD;
+  border-top: transparent;
+  background: white;
+}
+#push, #footer {
+  
   height:40px;
+}
+#footer {
+  background: #FAFAFA; 
+  border-top: 1px solid #EAEAEA;
+  text-align: center;
 }
 [contenteditable="true"] { background: #E9E9E9;  }
 
