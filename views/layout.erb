@@ -1,68 +1,70 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
   <head>
     <title>mysqlize> easy copy-paste tool for MySQL geeks</title>
     <meta charset="utf-8">
     <base href="/">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/vendor/bootstrap.min.css">
     <link rel="stylesheet" href="/css/pacifico.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script> 
+    <script src="/js/vendor/jquery/2.1.4/jquery.min.js"></script> 
     <script src="/js/script.js"></script>
     <link href='http://fonts.googleapis.com/css?family=Inconsolata' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600' rel='stylesheet' type='text/css'>
   </head>
   <body>
-  <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div id="wrapper">
+    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header"><a class="navbar-brand" href="#">mysqlize></a> </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="#">Xtrabackup</a></li>
+            <li class=""><a href="#">mysqldump</a></li>
+            <li class=""><a href="#">mysqlbackup</a></li>
+          </ul>
+        </div> <!-- .navbar-collapse -->
+      </div><!-- .container -->
+    </div><!-- navbar -->
+    <%= yield %>
     <div class="container">
-      <div class="navbar-header"><a class="navbar-brand" href="#">mysqlize></a> </div>
-      <div class="navbar-collapse collapse">
-        <ul class="nav navbar-nav">
-          <li class="active"><a href="#">Xtrabackup</a></li>
-          <li class=""><a href="#">mysqldump</a></li>
-          <li class=""><a href="#">mysqlbackup</a></li>
-        </ul>
-      </div> <!-- .navbar-collapse -->
-    </div><!-- .container -->
-  </div><!-- navbar -->
-<%= yield %>
-  <div class="container">
-    <div class="row">
-      <h2><span class="glyphicon glyphicon-wrench"></span> Build your command!</h2>
-    </div><!-- .row -->
-    <div class="row spacer-sm">
-  <div class="pull-left">
-    <h4>Use the options available for the current tool and copy the command below</h4>
-  </div>
-<div  class="pull-right">
-    
-    <div class="btn-group">
-        <label class="btn btn-success" >Show default values</label>
-        <label class="btn btn-success" >Show short options</label>
-        <label class="btn btn-warning">Copy!</label>
-        <div class="btn-group" dropdown is-open="status.isopen">
-      <button type="button" class="btn btn-danger dropdown-toggle" >
-         Choose version<span class="caret"></span>
-      </button>
-      <ul class="dropdown-menu" role="menu">
-        <li><a href="#">Action</a></li>
-        <li><a href="#">Another action</a></li>
-        <li><a href="#">Something else here</a></li>
-        <li class="divider"></li>
-        <li><a href="#">Separated link</a></li>
-      </ul>
-    </div>
-    </div>
-
-</div>
-    </div>
+      <div class="row">
+        <h2><span class="glyphicon glyphicon-wrench"></span> Build your command!</h2>
+      </div><!-- h2 title -->
+      <div class="row spacer-sm">
+        <div class="pull-left">
+          <h4>Use the options available for the current tool and copy the command below</h4>
+        </div>
+        <div  class="pull-right">
+          <div class="btn-group">
+              <label class="btn btn-success" >Show default values</label>
+              <label class="btn btn-success" >Show short options</label>
+              <label class="btn btn-warning">Copy!</label>
+              <div class="btn-group" dropdown is-open="status.isopen">
+            <button type="button" class="btn btn-danger dropdown-toggle" >
+               Choose version<span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu" role="menu">
+              <li><a href="#">Action</a></li>
+              <li><a href="#">Another action</a></li>
+              <li><a href="#">Something else here</a></li>
+              <li class="divider"></li>
+              <li><a href="#">Separated link</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div> 
     <div class="row row-sandbox">
       <div class="sandbox outline" id="sandbox">
-        <span contenteditable="true" class="pull-left" tooltip-animation="false" tooltip="I don't fade. :-(" >
+        <span contenteditable="true" class="pull-left sandbox-out" tooltip-animation="false" tooltip="I don't fade. :-(" >
         ./bin/
         </span><span class="pull-left">mysqldump</span>
       </div>
     </div>
-    
+    <div class="row">
+      <h3>Options for <span></span></h3>
+    </div>
+   
     <!-- Search -->
     <div class="row row-margin row-search">
       <input type="text" class="form-control" placeholder="Search for an option"></input>
@@ -71,20 +73,19 @@
     <!-- End Search -->
 
     <div class="row row-margin row-options">
-      <div class="panel panel-default">
-        <div class="panel-heading">
-          <h3 class="panel-title">Options for <span class="option-title"></span></h3>
-        </div>
-        <div class="panel-body panel-body-options">
-          Panel content
-        </div>
-      </div>
+      <ul class="nav nav-tabs" role="tablist">
+        <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">Home</a></li>
+        <li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">Profile</a></li>
+        <li role="presentation"><a href="#messages" aria-controls="messages" role="tab" data-toggle="tab">Messages</a></li>
+        <li role="presentation"><a href="#settings" aria-controls="settings" role="tab" data-toggle="tab">Settings</a></li>
+      </ul>
     </div>
   </div><!-- container -->
-  <footer class="footer">
-    <div class=container">
-    <p> Hello!</p>
+  </div>
+    <div class="footer">
+      <div class=container">
+      asdfasdffasdf
+      </div>
     </div>
-  </footer>
   </body>
 </html>
