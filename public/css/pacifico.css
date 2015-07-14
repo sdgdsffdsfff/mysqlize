@@ -1,4 +1,4 @@
-html, body {
+/*html, body {
   height: 100%;
 }
 body {
@@ -67,4 +67,19 @@ h2 { color: #303030;}
 [contenteditable="true"] { background: #E9E9E9;  }
 
 [contenteditable="true"]:hover { background: #E0E0E0;  }
+*/
 
+
+
+.command-card {
+  width: 95%;
+  margin:2.5em auto;
+}
+
+.mdl-card__title {
+  background: #FAFAFA;
+}
+.search-box { 
+  margin: 0 auto;
+  width:50%;
+}
