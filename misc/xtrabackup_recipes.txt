@@ -1,0 +1,4 @@
+* create a backup
+$ innobackupex [backup-destination]
+
+* stream a backup

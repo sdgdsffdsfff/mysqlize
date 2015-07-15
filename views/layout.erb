@@ -30,107 +30,140 @@
         <div class="mdl-layout__drawer">
           <span class="mdl-layout-title">Title</span>
         </div>
+
         <main class="mdl-layout__content">
           <section class="mdl-layout__tab-panel is-active" id="fixed-tab-1">
             <div class="page-content">
-              <div class="mdl-card mdl-shadow--2dp command-card ">
+              <div class="mdl-card command-card">
                 <div class="mdl-card__title mdl-card--border">
                   <div class="mdl-textfield mdl-js-textfield textfield-demo">
                     <textarea class="mdl-textfield__input" type="text" rows= "" id="sample5" ></textarea>
                   </div>
                 </div>
-                <div class="mdl-card__supporting-text">
-                The Sky Tower is an observation and telecommunications tower located in Auckland,
-                New Zealand. It is 328 metres (1,076 ft) tall, making it the tallest man-made structure
-                in the Southern Hemisphere.
+                <div class="mdl-card__actions">
+                  <button class="mdl-button mdl-js-button">
+                    Version 
+                  </button>
+                  <button class="mdl-button mdl-js-button" id="button-privileges-xtrabackup">
+                    Privileges 
+                  </button>
+                  <button class="mdl-button mdl-js-button mdl-button--accent">
+                    Copy to clipboard
+                  </button>
+                  <div class="mdl-grid privilege-details" id="privileges-xtrabackup">
+                    <h6>You need these privileges</h6>
+                    <table class="mdl-data-table mdl-js-data-table">
+                      <thead>
+                        <tr>
+                          <th class="mdl-data-table__cell--non-numeric">Privilege</th>
+                          <th class="mdl-data-table__cell--non-numeric">Needed to</th>
+                          <th class="mdl-data-table__cell--non-numeric">Context</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td class="mdl-data-table__cell--non-numeric privilege-name">Reload</td>
+                          <td class="mdl-data-table__cell--non-numeric">in order to FLUSH TABLES WITH READ LOCK and FLUSH ENGINE LOGS prior to start copying the files</td>
+                          <td class="mdl-data-table__cell--non-numeric">server administration</td>
+                        </tr>
+                        <tr>
+                          <td class="mdl-data-table__cell--non-numeric privilege-name">Lock Tables</td>
+                          <td class="mdl-data-table__cell--non-numeric">in order to FLUSH TABLES WITH READ LOCK and FLUSH ENGINE LOGS prior to start copying the files</td>
+                          <td class="mdl-data-table__cell--non-numeric">server administration</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div> 
+                </div>
                 </div>
               </div>
-            </div>
-<!-- Textfield with Floating Label -->
+  <!-- Textfield with Floating Label -->
 
-<form action="#">
-  <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label textfield-demo search-box">
-    <input class="mdl-textfield__input" type="text" id="sample3" />
-    <label class="mdl-textfield__label" for="sample3">Text...</label>
-  </div>
-</form>
-<div class="mdl-tabs mdl-js-tabs mdl-js-ripple-effect">
-  <div class="mdl-tabs__tab-bar">
-      <div id="tooltip-backup-ops">
-        <a href="#starks-panel" class="mdl-tabs__tab is-active">Backup ops</a>
-      </div>
-      <span for="tooltip-backup-ops" class="mdl-tooltip mdl-tooltip--large">Backup operations</span>
-
-      <div id="tooltip-restore-ops">
-        <a href="#lannisters-panel" class="mdl-tabs__tab"><span class="material-icons">restore</span>Restore ops</a>
-      </div>
-      <span for="tooltip-restore-ops" class="mdl-tooltip mdl-tooltip--large">Restore Operations</span>
-      
-
-  </div>
-
-  <div class="mdl-tabs__panel is-active" id="starks-panel">
-<table class="mdl-data-table mdl-js-data-table mdl-data-table--selectable mdl-shadow--2dp">
-  <thead>
-    <tr>
-      <th class="mdl-data-table__cell--non-numeric">Material</th>
-      <th>Quantity</th>
-      <th>Unit price</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td class="mdl-data-table__cell--non-numeric">Acrylic (Transparent)</td>
-      <td>25</td>
-      <td>$2.90</td>
-    </tr>
-    <tr>
-      <td class="mdl-data-table__cell--non-numeric">Plywood (Birch)</td>
-      <td>50</td>
-      <td>$1.25</td>
-    </tr>
-    <tr>
-      <td class="mdl-data-table__cell--non-numeric">Laminate (Gold on Blue)</td>
-      <td>10</td>
-      <td>$2.35</td>
-    </tr>
-  </tbody>
-</table>
-  </div>
-  <div class="mdl-tabs__panel" id="lannisters-panel">
-    <ul>
-      <li>Tywin</li>
-      <li>Cersei</li>
-      <li>Jamie</li>
-      <li>Tyrion</li>
-    </ul>
-  </div>
-  <div class="mdl-tabs__panel" id="targaryens-panel">
-    <ul>
-      <li>Viserys</li>
-      <li>Daenerys</li>
-    </ul>
-  </div>
-</div>
-
-          </section>
-          <section class="mdl-layout__tab-panel" id="fixed-tab-2">
-            <div class="page-content"><!-- Your content goes here --></div>
-          </section>
-          <section class="mdl-layout__tab-panel" id="fixed-tab-3">
-            <div class="page-content"><!-- Your content goes here --></div>
-          </section>
-        </main>
-        <footer class="mdl-mini-footer">
-          <div class="mdl-mini-footer--left-section">
-            <div class="mdl-logo">Title</div>
-            <ul class="mdl-mini-footer--link-list">
-              <li><a href="#">Help</a></li>
-              <li><a href="#">Privacy & Terms</a></li>
-            </ul>
-          </div>
-        </footer>
-      </div>
+  <form action="#">
+    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label textfield-demo search-box">
+      <input class="mdl-textfield__input" type="text" id="sample3" />
+      <label class="mdl-textfield__label" for="sample3">Text...</label>
     </div>
-  </body>
-</html>
+  </form>
+  <div class="mdl-tabs mdl-js-tabs mdl-js-ripple-effect">
+    <div class="mdl-tabs__tab-bar">
+        <div id="tooltip-backup-ops">
+          <a href="#starks-panel" class="mdl-tabs__tab is-active">Backup ops</a>
+        </div>
+        <span for="tooltip-backup-ops" class="mdl-tooltip mdl-tooltip--large">Backup operations</span>
+
+        <div id="tooltip-restore-ops">
+          <a href="#lannisters-panel" class="mdl-tabs__tab"><span class="material-icons">restore</span>Restore ops</a>
+        </div>
+        <span for="tooltip-restore-ops" class="mdl-tooltip mdl-tooltip--large">Restore Operations</span>
+        
+
+    </div>
+
+    <div class="mdl-tabs__panel is-active" id="starks-panel">
+  <table class="mdl-data-table mdl-js-data-table mdl-data-table--selectable mdl-shadow--2dp">
+    <thead>
+      <tr>
+        <th class="mdl-data-table__cell--non-numeric">Material</th>
+        <th>Quantity</th>
+        <th>Unit price</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="mdl-data-table__cell--non-numeric">Acrylic (Transparent)</td>
+        <td>25</td>
+        <td>$2.90</td>
+      </tr>
+      <tr>
+        <td class="mdl-data-table__cell--non-numeric">Plywood (Birch)</td>
+        <td>50</td>
+        <td>$1.25</td>
+      </tr>
+      <tr>
+        <td class="mdl-data-table__cell--non-numeric">Laminate (Gold on Blue)</td>
+        <td>10</td>
+        <td>$2.35</td>
+      </tr>
+    </tbody>
+  </table>
+    </div>
+    <div class="mdl-tabs__panel" id="lannisters-panel">
+      <ul>
+        <li>Tywin</li>
+        <li>Cersei</li>
+        <li>Jamie</li>
+        <li>Tyrion</li>
+      </ul>
+    </div>
+    <div class="mdl-tabs__panel" id="targaryens-panel">
+      <ul>
+        <li>Viserys</li>
+        <li>Daenerys</li>
+      </ul>
+    </div>
+  </div>
+
+            </section>
+            <section class="mdl-layout__tab-panel" id="fixed-tab-2">
+              <div class="page-content"><h2>Coming soon!</h2></div>
+            </section>
+            <section class="mdl-layout__tab-panel" id="fixed-tab-3">
+              <div class="page-content"><h2>Coming soon!</h2></div>
+            </section>
+          </main>
+          <footer class="mdl-mini-footer">
+            <div class="mdl-mini-footer--left-section">
+              <div class="mdl-logo">mysqlize.com</div>
+              <ul class="mdl-mini-footer--link-list">
+                <li><a href="http://ediardo.com" target="_blank">Developed by Eddie Ramirez</a></li>
+                <li><a href="#">Report an issue</a></li>
+                <li><a href="#">Make a donation</a></li>
+                <li><a href="#">Privacy & Terms</a></li>
+              </ul>
+            </div>
+          </footer>
+        </div>
+      </div>
+    </body>
+  </html>

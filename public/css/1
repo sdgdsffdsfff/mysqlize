@@ -69,19 +69,7 @@ h2 { color: #303030;}
 [contenteditable="true"]:hover { background: #E0E0E0;  }
 */
 
-.mdl-layout__header {
-  box-shadow: none;
-}
-.privilege-details {
-  display: none;
-}
-.privilege-details table {
-  width: 100%;
-}
-.privilege-details table .privilege-name {
-  font-family: monospace;
-  text-transform: uppercase;
-}
+
 .mdl-layout__content {
   background: RGB(240,240,240);
 }
@@ -91,7 +79,7 @@ h2 { color: #303030;}
 }
 
 .mdl-card__title {
-  background:RGB(254,254,254);
+  background:RGB(66,66,66);
 }
 .search-box { 
   margin: 0 auto;
