@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <base href="/">
     <script src="/js/require.js" data-main="/js/main.js"></script> 
-    <link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.0/material.indigo-pink.min.css" /> 
+    <link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.0/material.pink-red.min.css" /> 
     <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="/css/pacifico.css">
@@ -35,19 +35,23 @@
               <div class="mdl-card command-card">
                 <div class="mdl-card__title mdl-card--border">
                   <div class="mdl-textfield mdl-js-textfield textfield-demo">
-                    <textarea class="mdl-textfield__input" type="text" rows= "" id="sample5" ></textarea>
+                    <span id="command-box"></span>
                   </div>
                 </div>
                 <div class="mdl-card__actions">
-                  <button class="mdl-button mdl-js-button">
+                  <button class="mdl-button mdl-js-button version-button hidden-content" id="version-xtrabackup"  data-badge="2.2">
                     Version 
                   </button>
-                  <button class="mdl-button mdl-js-button" id="button-privileges-xtrabackup">
+                  <button class="mdl-button mdl-js-button privilege-button hidden-content" id="button-privileges-xtrabackup">
                     Privileges 
                   </button>
+                    <div class="mdl-tooltip mdl-tooltip--large" for="button-privileges-xtrabackup">Show all the privileges for Percona Xtrabackup</div>
                   <button class="mdl-button mdl-js-button mdl-button--accent">
                     Copy to clipboard
                   </button>
+                  <div class="mdl-grid version-details">
+                    <h6>Versions for Xtrabackup</h6>
+                  </div>
                   <div class="mdl-grid privilege-details" id="privileges-xtrabackup">
                     <h6>You need these privileges</h6>
                     <table class="mdl-data-table mdl-js-data-table">
@@ -99,46 +103,6 @@
     </div>
 
     <div class="mdl-tabs__panel is-active" id="starks-panel">
-  <table class="mdl-data-table mdl-js-data-table mdl-data-table--selectable mdl-shadow--2dp">
-    <thead>
-      <tr>
-        <th class="mdl-data-table__cell--non-numeric">Material</th>
-        <th>Quantity</th>
-        <th>Unit price</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td class="mdl-data-table__cell--non-numeric">Acrylic (Transparent)</td>
-        <td>25</td>
-        <td>$2.90</td>
-      </tr>
-      <tr>
-        <td class="mdl-data-table__cell--non-numeric">Plywood (Birch)</td>
-        <td>50</td>
-        <td>$1.25</td>
-      </tr>
-      <tr>
-        <td class="mdl-data-table__cell--non-numeric">Laminate (Gold on Blue)</td>
-        <td>10</td>
-        <td>$2.35</td>
-      </tr>
-    </tbody>
-  </table>
-    </div>
-    <div class="mdl-tabs__panel" id="lannisters-panel">
-      <ul>
-        <li>Tywin</li>
-        <li>Cersei</li>
-        <li>Jamie</li>
-        <li>Tyrion</li>
-      </ul>
-    </div>
-    <div class="mdl-tabs__panel" id="targaryens-panel">
-      <ul>
-        <li>Viserys</li>
-        <li>Daenerys</li>
-      </ul>
     </div>
   </div>
 

@@ -74,6 +74,9 @@ h2 { color: #303030;}
 .mdl-layout__header {
   box-shadow: none;
 }
+.version-details {
+  display: none;
+}
 .privilege-details {
   display: none;
 }
@@ -96,7 +99,14 @@ h2 { color: #303030;}
 .mdl-card__title {
   background:RGB(254,254,254);
 }
+.mdl-card__actions .weak-active {
+  background: RGB(235, 235, 235);
+}
 .search-box { 
   margin: 0 auto;
   width:50%;
+}
+#command-box {
+  display: block;
+  font-family: "Lucida Console", Monaco, monospace;
 }

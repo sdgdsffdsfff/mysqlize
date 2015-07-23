@@ -8,10 +8,21 @@ requirejs.config({
 });
 
 define(['jquery', 'material'], function ($) {
-
   $(document).ready(function(){
-    $('#button-privileges-xtrabackup').click(function() {
-      $('#privileges-xtrabackup').show('fast');
+    $('.mdl-card__actions .hidden-content').click(function(event) {
+      activeClass = 'mdl-button--primary';
+      duration = 400
+      parentElement = $(this).parent();
+      if ($(this).hasClass('version-button')) {
+        $('.version-details', parentElement).slideToggle(duration);
+        $('.privilege-details', parentElement).slideUp(duration);
+        $(this).addClass(activeClass);
+      } else if ($(this).hasClass('privilege-button')) {
+        $('.version-details', parentElement).slideUp(duration);
+        $('.privilege-details', parentElement).slideToggle(duration);
+        $(this).addClass(activeClass);
+      }
+
     });
   });
 });
