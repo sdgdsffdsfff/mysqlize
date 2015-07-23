@@ -34,9 +34,7 @@
             <div class="page-content">
               <div class="mdl-card command-card">
                 <div class="mdl-card__title mdl-card--border">
-                  <div class="mdl-textfield mdl-js-textfield textfield-demo">
-                    <span id="command-box"></span>
-                  </div>
+                    <span id="command-box">./bin/innobackupx --user=root --password=root --socket=mysql.sock /nfs/destination</span>
                 </div>
                 <div class="mdl-card__actions">
                   <button class="mdl-button mdl-js-button version-button hidden-content" id="version-xtrabackup"  data-badge="2.2">
@@ -82,11 +80,12 @@
   <!-- Textfield with Floating Label -->
 
   <form action="#">
-    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label textfield-demo search-box">
+    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label search-box">
       <input class="mdl-textfield__input" type="text" id="sample3" />
-      <label class="mdl-textfield__label" for="sample3">Text...</label>
+      <label class="mdl-textfield__label" for="sample3">Search an option...</label>
     </div>
   </form>
+
   <div class="mdl-tabs mdl-js-tabs mdl-js-ripple-effect">
     <div class="mdl-tabs__tab-bar">
         <div id="tooltip-backup-ops">

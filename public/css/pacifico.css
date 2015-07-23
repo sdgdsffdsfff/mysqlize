@@ -104,9 +104,11 @@ h2 { color: #303030;}
 }
 .search-box { 
   margin: 0 auto;
-  width:50%;
+  width:75%;
+  display: block;
 }
 #command-box {
   display: block;
   font-family: "Lucida Console", Monaco, monospace;
+  width: 100%;
 }
