@@ -7,4 +7,5 @@ gem 'mongo'
 group :development do
   gem 'rerun'
   gem 'thin'
+  gem 'better_errors'
 end

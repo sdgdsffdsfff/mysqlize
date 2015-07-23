@@ -68,7 +68,9 @@ h2 { color: #303030;}
 
 [contenteditable="true"]:hover { background: #E0E0E0;  }
 */
-
+.mdl-mini-footer {
+  padding: 5px 20px;
+}
 .mdl-layout__header {
   box-shadow: none;
 }
@@ -87,6 +89,7 @@ h2 { color: #303030;}
 }
 .command-card {
   width: 95%;
+  min-height: 0;
   margin:2.5em auto;
 }
 

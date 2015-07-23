@@ -3,13 +3,11 @@ require 'sinatra'
 require 'json'
 require 'mongo'
 require 'rest_client'
-#asda
+
 set :port, 8080
 include Mongo
 configure do
-  conn = MongoClient.new("localhost", 27017)
-  set :mong_connection, conn
-  set :mongo_db, conn.db('mysqlize')
+  con = Mongo::Client.new(['127.0.0.1'], :database => 'mysqlize')
 end
 
 # edit
@@ -27,7 +25,7 @@ end
 
 get '/options/:tool/:version' do
   content_type :json
-  settings.mongo_db['options'].find('tool' => params[:tool], 'versions' => { '$in' => [params[:version]]}).to_a.to_json
+  con[:options].find(:tool => params[:tool], :versions => { '$in' => [params[:version]]}).to_a.to_json
 end
 
 # 404 Error
