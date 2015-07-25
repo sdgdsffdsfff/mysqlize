@@ -9,8 +9,13 @@ set :port, 8080
 include Mongo
 configure do
   con = Mongo::Client.new(['127.0.0.1'], :database => 'mysqlize')
+  set :mongo_db, con[:mysqlize]
 end
 
+get '/privileges' do
+  content_type :json
+  settings.mongo_db.privileges.find.to_a.to_json
+end
 # edit
 get '/xtrabackup' do
   erb :index
