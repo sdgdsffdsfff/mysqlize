@@ -88,7 +88,7 @@ h2 { color: #303030;}
   text-transform: uppercase;
 }
 .mdl-layout__content {
-  background: RGB(240,240,240);
+  background: RGB(245,245,245);
 }
 .command-card {
   width: 95%;
@@ -111,4 +111,8 @@ h2 { color: #303030;}
   display: block;
   font-family: "Lucida Console", Monaco, monospace;
   width: 100%;
+}
+.mdl-tabs__panel.is-active {
+  background: RGB(255, 255, 255);
+  min-height: 100%;
 }

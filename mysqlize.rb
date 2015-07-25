@@ -4,6 +4,7 @@ require 'json'
 require 'mongo'
 require 'rest_client'
 
+set :bind, '0.0.0.0'
 set :port, 8080
 include Mongo
 configure do
