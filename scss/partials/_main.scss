@@ -1,0 +1,46 @@
+main {
+
+  background: $main-background !important;
+  
+  .tool-box {
+
+  }
+
+  .command-card {
+    width: 95%;
+    margin: 2.5em auto;    
+    min-height: 0;
+    .command-box {
+      background: RGB(254, 254, 254);
+      
+      #cli-text {
+        display: block;
+        font-family: 'Lucida Console', Monaco, monospace;
+      }
+    }
+
+    .version-details {
+      display: none;
+    }
+
+    .privilege-details {
+      display: none;
+
+      table {
+        width: 100%;
+
+        .privilege-name {
+          font-family: monospace;
+          text-transform: uppercase;   
+        }
+      }
+    }
+  } 
+
+  .search-box {
+    margin: 0 auto;
+    width: 80%;
+    display: block;
+  }
+
+}

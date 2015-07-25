@@ -1,0 +1,32 @@
+header {
+  box-shadow: none; }
+
+main {
+  background: RGB(245, 245, 245) !important; }
+  main .command-card {
+    width: 95%;
+    margin: 2.5em auto;
+    min-height: 0; }
+    main .command-card .command-box {
+      background: RGB(254, 254, 254); }
+      main .command-card .command-box #cli-text {
+        display: block;
+        font-family: 'Lucida Console', Monaco, monospace; }
+    main .command-card .version-details {
+      display: none; }
+    main .command-card .privilege-details {
+      display: none; }
+      main .command-card .privilege-details table {
+        width: 100%; }
+        main .command-card .privilege-details table .privilege-name {
+          font-family: monospace;
+          text-transform: uppercase; }
+  main .search-box {
+    margin: 0 auto;
+    width: 80%;
+    display: block; }
+
+footer {
+  padding: 5px 20px !important; }
+
+/*# sourceMappingURL=main.css.map */
