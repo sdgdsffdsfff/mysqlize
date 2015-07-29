@@ -6,15 +6,18 @@ require 'rest_client'
 
 set :bind, '0.0.0.0'
 set :port, 8080
+
 include Mongo
+
 configure do
   con = Mongo::Client.new(['127.0.0.1'], :database => 'mysqlize')
-  set :mongo_db, con[:mysqlize]
+set :con, con
 end
+
 
 get '/privileges' do
   content_type :json
-  settings.mongo_db.privileges.find.to_a.to_json
+  settings.con[:privileges].find().to_a.to_json
 end
 # edit
 get '/xtrabackup' do
