@@ -1,3 +1,14 @@
 header {
   box-shadow: none;
+  .mdl-layout__tab-bar-button { display: none; }
+  .mdl-layout__tab-bar { padding-left: 20px; }
+  .mdl-layout__header-row { 
+    height: 80px; 
+    padding-left: 45px;
+    img {
+      height: 55px;
+      width: auto;
+    }
+  }
 }
+

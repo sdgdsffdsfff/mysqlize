@@ -1,1 +1,12 @@
 $main-background: RGB(245, 245, 245);
+@import 'vendor/material-design-lite/src/_color-definitions.scss';
+$color-primary: $palette-cyan-500;
+$color-primary-dark: $palette-cyan-700;
+$color-accent: $palette-cyan-600;
+$color-primary-contrast: $color-dark-contrast;
+$color-accent-contrast: $color-dark-contrast;
+@import 'vendor/material-design-lite/src/material-design-lite.scss';
+
+
+
+
