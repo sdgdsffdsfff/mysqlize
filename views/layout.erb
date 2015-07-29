@@ -5,29 +5,24 @@
     <meta charset="utf-8">
     <base href="/">
     <script src="/js/require.js" data-main="/js/main.js"></script> 
-    <link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.0/material.pink-red.min.css" /> 
+    <link rel="stylesheet" href="/css/main.css">
     <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <link rel="stylesheet" href="/css/main.css">
   </head>
   <body>
     <div class="mdl-layout__container">
-      <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header mdl-layout--fixed-tabs">
-        <header class="mdl-layout__header">
+      <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+         <header class="mdl-layout__header">
           <div class="mdl-layout__header-row">
-          <!-- Title -->
-            <span class="mdl-layout-title">mysqlize></span>
+            <img src="/img/logo_v1.png">
           </div>
           <!-- Tabs -->
           <div class="mdl-layout__tab-bar mdl-js-ripple-effect">
-            <a href="#fixed-tab-1" class="mdl-layout__tab is-active">Xtrabackup</a>
-            <a href="#fixed-tab-2" class="mdl-layout__tab">mysqldump</a>
-            <a href="#fixed-tab-3" class="mdl-layout__tab">mysqlbackup (MEB)</a>
+            <a href="#scroll-tab-1" class="mdl-layout__tab is-active"><i class="material-icons">backup</i>Backup</a>
+            <a href="#scroll-tab-2" class="mdl-layout__tab"><i class="material-icons">supervisor_account</i>Account & privileges</a>
+            <a href="#scroll-tab-3" class="mdl-layout__tab"><i class="material-icons">build</i>Utilities</a>
           </div>
         </header>
-        <div class="mdl-layout__drawer">
-          <span class="mdl-layout-title">Title</span>
-        </div>
 
         <main class="mdl-layout__content tool-box">
           <section class="mdl-layout__tab-panel is-active" id="fixed-tab-1">
