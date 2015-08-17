@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= @page_title %> - mysqlize</title>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    <%= csrf_meta_tags %>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
+  <body>
+      <header class="header">
+        <nav class="navbar navbar-default navbar-fixed-top">
+          <div class="container">
+            <div class="navbar-header">
+            </div>
+            <ul class="nav navbar-nav header-menu">
+              <li><a href="/databases" role="button">Databases</a></li>
+              <li><a href="/backups" role="button">Backups</a></li>
+              <li><a href="/accounts" role="button">Accounts</a></li>
+              <li><a href="/tools" role="button">Tools</a></li>
+            </ul>
+          </div>
+        </nav>
+      </header>
+      <main class="container-fluid main">
+        <%= yield %>
+      </main>
+      <footer class="footer">
+        <div class="container">
+          <ul class="footer-menu">
+            <li>Developed by <a href="http://ediardo.com">Eddie Ramirez</a></li>
+            <li>Donate</li>
+            <li>Privacy</li>
+            <li>Terms of service</li>
+          </ul>
+        </div>
+      </footer>
+  </body>
+</html>
