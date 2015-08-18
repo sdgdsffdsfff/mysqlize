@@ -1,19 +1,17 @@
 .header {
 
   .navbar-default {
-    background-color: transparent;
+    background-color: #FAFAFA;
   }
 }
 .header-menu {
   li {
-      -webkit-transition: all 0.2s ease;
-      transition: all 0.2s ease;
-      border-bottom: 2px solid transparent;
+    -webkit-transition: all 0.15s ease-in-out 0s;
+    transition: all 0.15s ease-in-out 0s;
     &:hover {
-      -webkit-transition: all 0.2s ease;
-      transition: all 0.2s ease;
+      -webkit-transition: all 0.15s ease-in-out 0s;
+      transition: all 0.15s ease-in-out 0s;
       background-color: #F0F0F0;
-      border-bottom: 2px solid rgb(255, 255, 170);
     }
   }
 }
