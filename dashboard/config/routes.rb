@@ -3,4 +3,5 @@ Rails.application.routes.draw do
   resources :pages
   devise_for :users
   resources :privileges
+  resources :accounts
 end

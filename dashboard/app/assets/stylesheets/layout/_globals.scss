@@ -1,0 +1,32 @@
+body {
+  font-family: $base-font-family;
+  font-size: $base-font-size;
+  line-height: $base-line-height;
+  color: $base-font-color;
+  height: 100%;
+  overflow: hidden;
+
+  .wrapper {
+    overflow: inherit;
+    height: inherit;
+    &::after {
+      z-index: 2;
+      content: '';
+      position: absolute;
+      top: 0px;
+      right: 0px;
+      bottom: 0px;
+      left: 0px;
+      visibility: hidden;
+      opacity: 0;
+      background: rgba(0, 0, 0, 0.2);
+      transition-property: opacity, visibility;
+      transition-duration: 250ms;
+      transition-timing-function: ease-in-out;
+    }
+    &.-layover::after {
+      visibility: visible;
+      opacity: 1;
+    }
+  }
+} 
