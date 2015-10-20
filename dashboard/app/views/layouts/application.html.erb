@@ -9,17 +9,12 @@
   </head>
   <body class="<%= controller_name + '-' + action_name %>">
     <div class="wrapper"> 
-      <header class="header">
-      </header>
       <aside class="aside-menu">
         <ul>
-          <li role="presentation" class="active"><a href="/"><i class="fa fa-home"></i>Home</a></li>
-          <li role="presentation" class="active"><a href="/"><i class="fa fa-server"></i>Servers</a></li>
-          <li role="presentation" class="active"><a href="#"><i class="fa fa-database"></i>Databases</a></li>
-          <li role="presentation"><a href="#"><i class="fa fa-users"></i>Accounts</a></li>
-          <li role="presentation"><a href="#"><i class="fa fa-cloud-upload"></i>Backups</a></li>
-          <li role="presentation"><a href="#"><i class="fa fa-heartbeat"></i>Monitor</a></li>
-          <li role="presentation"><a href="#"><i class="fa fa-wrench"></i>Tools</a></li>
+          <li role="presentation" class="active"><a href="/"><i class="fa fa-home"></i><span>Home<span></a></li>
+          <li role="presentation"><a href="/backups"><i class="fa fa-cloud-upload"></i><span>Backups</span></a></li>
+          <li role="presentation"><a href="/accounts"><i class="fa fa-users"></i><span>Accounts<span></a></li>
+          <li role="presentation"><a href="/monitor"><i class="fa fa-heartbeat"></i></span>Monitor</span></a></li>
           <li role="presentation"><a href="#"><i class="fa fa-question-circle"></i>Help</a></li>
         </ul>
       </aside>
