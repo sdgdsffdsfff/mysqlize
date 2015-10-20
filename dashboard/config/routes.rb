@@ -4,4 +4,5 @@ Rails.application.routes.draw do
   devise_for :users
   resources :privileges
   resources :accounts
+  resources :backups
 end

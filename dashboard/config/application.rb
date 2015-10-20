@@ -1,6 +1,5 @@
 require File.expand_path('../boot', __FILE__)
 
-require 'suzy'
 require 'rails/all'
 
 # Require the gems listed in Gemfile, including any gems
