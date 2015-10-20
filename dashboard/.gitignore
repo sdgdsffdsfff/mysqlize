@@ -10,6 +10,8 @@ capybara-*.html
 /coverage/
 /spec/tmp
 **.orig
+*.pid
+tmp/*
 rerun.txt
 pickle-email-*.html
 
