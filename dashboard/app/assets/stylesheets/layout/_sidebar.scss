@@ -1,57 +1,51 @@
 aside.aside-menu {
-  z-index: 3;
+  z-index: 0;
   position: fixed;
-  background-color: #222;
-  width: 50px;
+  background-color: $sidebar-bg-color ;
+  border-right: 1px solid $sidebar-border-color;
+  width: $sidebar-width;
   top: 0px;
   height: inherit;
-  transition: all 0.2s ease-in-out;
-  transition-delay: 0.2s;
   overflow: hidden;
   text-overflow: clip;
-  text-overflow: clip;
   white-space: nowrap;
-  color: #FFF;
+  color: #000;
+
   ul{
-    margin-top: 70px;
+    margin-top: 40px;
     padding: 0;
     list-style-type: none;
     width: 100%;
     li {
-      margin-bottom: 7px;
+      text-align: center;
+      color: $sidebar-link-color;
       a {
         text-decoration: none;
         color: inherit;
-        padding-top: 10px;
-        padding-bottom: 10px;
+        padding: 17px 0 17px;
         display: block;
-        font-size: 1.1em;
+        transition: color 0.25s, transform 0.25s;
+        &:hover, &.active {
+          color: darken($sidebar-link-color, 40%);
+          i {
+            transition: transform 0.8s;
+          }
+        }
       }
       i {
-        margin-left: 16px;
-        text-align: left;
-        margin-right: 20px;
-        font-size: 1.5em;
+        font-size: 1.8em;
+        display: block;
+        margin-bottom: 8px;
+      }
+
+      &:active {
+        i {
+          transform: scale(0.96);
+        }
+      }
+      &:last-child {
+        margin-top: 50px;
       }
     }
   }
-}
-
-aside.aside-menu.-expanded {
-  width: 175px;
-  z-index: 3;
-  position: fixed;
-  height: inherit; 
-  li {
-    overflow: hidden;
-  }
-
-    li:hover { 
-      left: 0px;
-      background-color: #111;
-      i {
-        color: #2ECC71;
-      }
-
-    } 
 }

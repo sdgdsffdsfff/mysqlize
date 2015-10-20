@@ -1,12 +1,7 @@
 main {
-  position: fixed;
-  top: 40px;
-  left: 50px;
-  bottom: 0px;
-  right: 0px;
-  clear: both;
-  background-color: #F5F5F5;
-
+  padding-left: $main-left-offset;
+  background: linear-gradient( 180deg, darken($main-bg-color, 5%), $main-bg-color 100px);
+  min-height: 100vh;
   .yield {
     display:block;
     position: relative;
