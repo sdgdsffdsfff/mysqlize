@@ -1,0 +1,6 @@
+SELECT 
+	CONCAT_WS('@',
+		CONCAT(LEFT(user, 1), REPEAT('*', LENGTH(user) -2 ), RIGHT(user, 1)),
+		CONCAT(LEFT(host,1), REPEAT('*', LENGTH(host) -2), RIGHT(host, 1))) AS user,
+	password  
+FROM mysql.user;

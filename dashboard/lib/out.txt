@@ -1,0 +1,11 @@
++-----------+--------------+-------------------------------------------+
+| Host      | User         | Password                                  |
++-----------+--------------+-------------------------------------------+
+| localhost | root         | *81F5E21E35407D884A6CD4A731AEBFB6AF209E1B |
+| andromeda | root         | *81F5E21E35407D884A6CD4A731AEBFB6AF209E1B |
+| 127.0.0.1 | root         | *81F5E21E35407D884A6CD4A731AEBFB6AF209E1B |
+| ::1       | root         | *81F5E21E35407D884A6CD4A731AEBFB6AF209E1B |
+| localhost | mysqlize_dev | *A840FD6DF91561FA0BC0D633C01EC35B1417AE64 |
+| localhost | yatmym       | *73C1134F9B58C3F6BAB62DD1F9172A6B2D59E235 |
+| localhost | dummy        | *94BDCEBE19083CE2A1F959FD02F964C7AF4CFC29 |
++-----------+--------------+-------------------------------------------+

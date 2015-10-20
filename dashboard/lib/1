@@ -1,0 +1,40 @@
+class MySQLParser
+  
+  @raw_input
+  @columns
+  @format 
+  @result
+  @formats = ['grid', 'tab', 'vertical']
+
+  def initialize(input, format=nil, column_names=nil)
+    @raw_input = input.lines
+
+    if @raw_input.empty?
+      exit
+    end
+
+    @format = find_format
+    if @format == nil 
+      puts "empty"
+    end
+
+  end
+
+  def find_format
+    @raw_input.each_with_index do |line, idx|
+      puts line[0], line[line.length - 1]
+      if line.start_with?('+') and line.end_with?('+')
+        puts line
+        puts idx
+      end
+    end
+  end
+
+  def find_column_name
+    
+  end
+end
+
+file = File.open(ARGV[0], 'r')
+input =  file.read
+parser = MySQLParser.new(input)
