@@ -1,0 +1,18 @@
+div.textbox-container {
+  padding: 10px;
+  background-color: #FFF;
+  border: 1px solid $gray-D;
+}
+input {
+ 
+  &.search-textbox {
+    border: 0px;
+    padding: 0px;
+    margin: 0px;
+    outline: none;
+  }
+  &.b-search-textbox {
+    font-size: 22px;
+    width: 100%;
+  }
+}
